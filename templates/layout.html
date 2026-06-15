@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+      <title>REEEEE - {{ title }}</title>
+    {% else %}
+      <title>REEEEE</title>
+    {% endif %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href={{ url_for('home')}}>Merp a Derp</a>
+
+        <div class="navbar-nav">
+            <a class="nav-link" href={{ url_for('home') }}>Home</a>
+            <a class="nav-link" href="#">Upload</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-f">
+    {% block content %}
+    {% endblock content %}
+</div>
+
+<footer class="mt-auto py-3 bg-body-tertiary border-top">
+    <div class="container text-center">
+    <p class="text-body-secondary mb-0">
+        © <span id="year"></span> John Silva
+    </p>
+    </div>
+</footer>
+
+</body>
+</html>
