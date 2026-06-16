@@ -5,7 +5,11 @@ class UserBase(BaseModel):
     email: str
     
 class UserCreate(UserBase):
-    pass
+    password: str
+
+class UserLogin(UserBase):
+    email: str
+    password: str
 
 class UserResponse(UserBase):
     model_config = ConfigDict(from_attributes=True)
